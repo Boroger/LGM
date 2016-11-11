@@ -1,0 +1,16 @@
+<?php
+namespace Home\Controller;
+use \Think\Controller;
+
+class UserController extends Controller
+{
+
+	public function index()
+	{
+	 // $this->display('User:index');
+	 //T()方法获取模板地址，相对路径
+	 // echo T('Admin@User/index');
+	 // $this->title = 'ppppppppp';
+	 // $this->display(T('Admin@User/index'));
+	}
+}
