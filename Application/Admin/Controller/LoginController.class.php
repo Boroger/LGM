@@ -54,14 +54,13 @@ class LoginController extends AdminController
     } else {
         $this->error('账号有误', U('Login/login'),3);    
     }
-    
-
-    
-    
-
      // $this->display('Index/index');
     }
 
     
-
+    public function logout()
+    {
+        session(null);
+        header('Location: Login/login');
+    }
 }

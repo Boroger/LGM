@@ -13,12 +13,12 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/web/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -52,8 +52,8 @@
 						</a>
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="#">个人信息</a></li>
-							<li><a href="<?php echo U('Login/login');?>">切换账户</a></li>
-							<li><a href="<?php echo U('Login/login');?>">退出</a></li>
+							<li><a href="<?php echo U('Login/logout');?>">切换账户</a></li>
+							<li><a href="<?php echo U('Login/logout');?>">退出</a></li>
 						</ul>
 					</li>
 					<li id="Hui-msg"> <a href="#" title="消息">
@@ -132,8 +132,8 @@
 			<dd>
 				<ul>
 					<li><a _href="admin-role.html" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
-					<li><a _href="admin-permission.html" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
-					<li><a  data-title="管理员列表" href="<?php echo U('Adm/admlist');?>">管理员列表</a></li>
+					<li><a _href="<?php echo U('Adm/permission');?>" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
+					<li><a _href="<?php echo U('Adm/admlist');?>" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -182,10 +182,10 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="/web/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/web/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/web/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/web/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
 /*资讯-添加*/
 function article_add(title,url){
