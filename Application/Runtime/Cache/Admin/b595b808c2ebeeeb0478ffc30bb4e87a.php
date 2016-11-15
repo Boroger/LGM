@@ -52,8 +52,8 @@
 						</a>
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="#">个人信息</a></li>
-							<li><a href="<?php echo U('Login/logout');?>">切换账户</a></li>
-							<li><a href="<?php echo U('Login/logout');?>">退出</a></li>
+							<li><a href="<?php echo U('Login/login');?>">切换账户</a></li>
+							<li><a href="<?php echo U('Login/login');?>">退出</a></li>
 						</ul>
 					</li>
 					<li id="Hui-msg"> <a href="#" title="消息">
@@ -82,20 +82,20 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="<?php echo U('Article/list');?>" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
+					<li><a _href="article-list.html" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-picture">
-			<dt><i class="Hui-iconfont">&#xe613;</i> 小组管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="picture-list.html" data-title="图片管理" href="javascript:void(0)">小组管理</a></li>
+					<li><a _href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 帖子管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a _href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
@@ -132,8 +132,8 @@
 			<dd>
 				<ul>
 					<li><a _href="admin-role.html" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
-					<li><a _href="<?php echo U('Adm/permission');?>" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
-					<li><a _href="<?php echo U('Adm/admlist');?>" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+					<li><a _href="admin-permission.html" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
+					<li><a  data-title="管理员列表" href="<?php echo U('Adm/admlist');?>">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -220,14 +220,14 @@ function member_add(title,url,w,h){
 }
 </script> 
 <script type="text/javascript">
-// var _hmt = _hmt || [];
-// (function() {
-//   var hm = document.createElement("script");
-//   hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-//   var s = document.getElementsByTagName("script")[0]; 
-//   s.parentNode.insertBefore(hm, s)})();
-// var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-// document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
 </script>
 </body>
 </html>

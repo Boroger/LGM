@@ -4,9 +4,8 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdmController extends AdminController
 {
-
 	public function add()
-	{	
+	{
 		$this->display();
 	}
 
@@ -33,42 +32,20 @@ class AdmController extends AdminController
 	public function admlist()
 	{	
 		$admin = M('admin');
+		$data = $admin->select();
 		$total = $admin->field('count(*)')->select();
 		$total = $total[0]['count(*)'];
-        $this->assign('totals',$total);
-		$list = $admin->where($where)->page($num,2)->select();
-		$lists = $admin->where($where)->select();
-		$total = count($lists);
-		$this->assign('total',$total/2);
-        $this->assign('list',$list);
-		$this->display();
-		
-	}
 
-	public function listajax()
-	{
-		// $num = $_GET['p'];
-		$num = I('get.p/d');
-		$where = $_GET['name'];
-		$admin = M('admin');
-		$lists = $admin->where($where)->select();
-		$total = count($lists);
         $this->assign('total',$total);
-
-		$total = ceil($total/2);
-		$num = $num>$total?$total:$num;
-		
-		$list = $admin->where($where)->page($num,2)->select();
-		$this->assign('list',$list);
-		// $this->display(); 	
-		$ajax = $this->fetch('adm/listajax');
-		$this->ajaxReturn($ajax);
+        $this->assign('list',$data);
+		$this->display();
 	}
 
 	//编辑页面
 	public function edit()
 	{
         $id = I('get.id/d');
+
         $data = M('admin')->find($id);
         $this->assign('data',$data);
 		$this->display();
@@ -81,32 +58,25 @@ class AdmController extends AdminController
             exit;
         }
         $data = M('admin')->create();
-
+        // dump($data);
+        // echo '<hr>';
+        // die;
         //执行修改
         if (M('admin')->save() > 0) {
+        	echo M('admin')->getLastSql();
+        	// die;
            $this->success('恭喜您,修改成功!', U('admlist'));
         } else {
+        	echo M('admin')->getLastSql();
+        	// die;
         	$this->error('修改失败....');
+
         }
 	}
 
 	public function del()
 	{
-		if (empty($_GET['id'])) {
-			$this->redirect('Admin/adm/add');
-		}
-		$id = I('get.id/d');
-		if (M('admin')->delete($id)>0) {
-			$this->success('删除成功',U('admlist'));
-		} else {
-			$this->error('删除失败',U('admlist'));
-		}
-	}
 
-	public function permission()
-	{
-		$this->display();
 	}
-	
 }
 

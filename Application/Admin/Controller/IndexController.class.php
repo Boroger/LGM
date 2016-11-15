@@ -5,7 +5,6 @@ use \Think\Controller;
 class IndexController extends AdminController 
 {
     public function index(){
-
         if ($_SESSION['state'] == 0) {
             $identity = "超级管理员";
         } else {

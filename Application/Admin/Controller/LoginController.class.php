@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class LoginController extends Controller
+class LoginController extends AdminController
 {
     
     public function login()
@@ -31,8 +31,6 @@ class LoginController extends Controller
     $state = $admin->field('state')->where("name='$name'")->find();
     session('state',$state['state']);
     session('name',"$name");
-    // var_dump($_SESSION);
-    // die;
 
     //登陆判断处理
     //检查验证码
@@ -56,14 +54,14 @@ class LoginController extends Controller
     } else {
         $this->error('账号有误', U('Login/login'),3);    
     }
+    
+
+    
+    
+
      // $this->display('Index/index');
     }
 
     
-    public function logout()
-    {
-        session(null);
-        header('Location: Login/login');
-    }
 
 }
