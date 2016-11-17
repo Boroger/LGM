@@ -18,4 +18,5 @@ return array(
     'TMPL_PARSE_STRING' =>array(
         '__UPLOAD__' => __ROOT__.'/Uploads',
     ),
+        'SHOW_PAGE_TRACE' =>true,
 );

@@ -1,0 +1,46 @@
+a{text-decoration: none;}
+*{padding:0;margin:0;}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.border{
+    border:1px solid red;
+}
+.type{
+    font-size: 18px;
+    width:10%;
+}
+.type1{
+    font-size: 18px;
+    width:10%;
+}
+.type :hover{
+    color:#43519B;
+    cursor:pointer;
+}
+
+.group_content{
+    padding: 20px;
+    width:70%;
+}
+
+.group_zi{
+    color:#666666;
+}
+
+.mt10{
+    margin-top:10px;
+}
+.mt20{
+    margin-top:20px;
+}
+
+.mt30{
+    margin-top:30px;
+}
+.hover:hover{
+    color:red;
+}

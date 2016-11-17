@@ -11,12 +11,12 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="page-container">
-	<p class="f-20 text-success">欢迎使用H-ui.admin <span class="f-14">v2.4</span>后台模版！</p>
+	<p class="f-20 text-success">欢迎使用LGM管理平台</p>
 	<p>登录次数：18 </p>
 	<p>上次登录IP：222.35.131.79.1  上次登录时间：2014-6-14 11:19:55</p>
 	<table class="table table-border table-bordered table-bg">
@@ -194,18 +194,18 @@
 			本后台系统由<a href="http://www.h-ui.net/" target="_blank" title="H-ui前端框架">H-ui前端框架</a>提供前端技术支持</p>
 	</div>
 </footer>
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+// var _hmt = _hmt || [];
+// (function() {
+//   var hm = document.createElement("script");
+//   hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+//   var s = document.getElementsByTagName("script")[0]; 
+//   s.parentNode.insertBefore(hm, s);
+// })();
+// var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+// document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
 </script>
 </body>
 </html>

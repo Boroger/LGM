@@ -13,24 +13,24 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web(1)/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>H-ui.admin v2.4</title>
+<title>LGM社区管理平台</title>
 <meta name="keywords" content="H-ui.admin v2.4,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
 <meta name="description" content="H-ui.admin v2.4，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
 <header class="navbar-wrapper">
 	<div class="navbar navbar-fixed-top">
-		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">H-ui.admin</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan f-l mr-10 hidden-xs">v2.4</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">LGM管理平台</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan f-l mr-10 hidden-xs">v1.0</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
 			<nav class="nav navbar-nav">
 				<ul class="cl">
 					<li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
@@ -82,20 +82,20 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="article-list.html" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
+					<li><a _href="<?php echo U('Article/alist');?>" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-picture">
-			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe613;</i> 小组管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
+					<li><a _href="<?php echo U('Group/alist');?>" data-title="小组管理" href="javascript:void(0)">小组管理</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe620;</i> 帖子管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a _href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
@@ -131,9 +131,9 @@
 			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员列表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="admin-role.html" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
-					<li><a _href="<?php echo U('Adm/permission');?>" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
-					<li><a _href="<?php echo U('Adm/admlist');?>" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+					<li><a _href="<?php echo U('Admin/permList');?>" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
+					<li><a _href="<?php echo U('Admin/roleList');?>" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
+					<li><a _href="<?php echo U('Admin/adminList');?>" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -182,10 +182,10 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/web(1)/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
 /*资讯-添加*/
 function article_add(title,url){
@@ -220,14 +220,14 @@ function member_add(title,url,w,h){
 }
 </script> 
 <script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s)})();
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+// var _hmt = _hmt || [];
+// (function() {
+//   var hm = document.createElement("script");
+//   hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+//   var s = document.getElementsByTagName("script")[0]; 
+//   s.parentNode.insertBefore(hm, s)})();
+// var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+// document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
 </script>
 </body>
 </html>

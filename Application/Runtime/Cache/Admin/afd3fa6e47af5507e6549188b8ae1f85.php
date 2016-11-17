@@ -19,11 +19,11 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 <body>
 <div class="system-message">
 <?php if(isset($message)) {?>
-<h1><img src="/web/Public/tips.png"/></h1>
+<!-- <h1><img src="/Roger_www/web11152/Public/tips.png"/></h1> -->
 <p class="success"><?php echo($message); ?></p>
 <?php }else{?>
-<h1><center><img src="/web/Public/tips.png"/></center></h1>
-<div id="tips">
+<!-- <h1><center><img src="/Roger_www/web11152/Public/tips.png"/></center></h1> -->
+<!-- <div id="tips"> -->
 	<p class="error"><?php echo($error); ?></p>
 	<?php }?>
 	<p class="detail"></p>

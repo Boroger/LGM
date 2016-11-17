@@ -1,0 +1,179 @@
+body{
+	font-family: "微软雅黑";
+}
+		.container{/*<750*/
+			margin: 0 auto;
+			width:90%;
+		}
+		
+		@media (min-width: 768px){
+			.container{
+				width: 750px;
+			}
+		}
+
+		@media (min-width: 992px){
+			.container{
+				width: 970px;
+			}
+		}
+
+		@media (min-width: 1200px){
+			.container{
+				width: 1170px;
+			}
+		}
+.pic{
+	width:100%;
+}
+
+.rec{
+	margin-top: 30px;
+}
+.clear{
+	clear:both;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.border{
+	border:1px solid red;
+}
+
+.recommend{
+	float:left;
+	font-size: 23px;
+	color:#898989;
+}
+.rec_more{
+	font-size:23px;
+	float:right;
+	color:#57ADFD;
+}
+.rec_more:hover{
+	color:#0176A9;
+	cursor:pointer;
+
+}
+.rec_list{
+	/*position:absolute;*/
+	/*left:50%;*/
+	/*margin:0 -480px;*/
+	width:960px;
+	border:1px solid blue;
+}
+
+.rec_img{
+	margin-right: 21px;
+	margin-top: 10px;
+
+}
+.time{
+	font-size: 20px;
+	color:#898989;
+	margin-top: 10px;
+}
+.user{
+	font-size: 20px;	
+}
+.group{
+	color:#898989;
+}
+
+.title{
+	font-size: 25px;
+	color:black;
+	/*margin-top: 20px;*/
+}
+.content{
+	font-size: 17px;
+	color:#898989;
+	margin-left:40px;
+	margin-top: 20px;
+}
+
+.gray{
+	background-color:#F5F5F5;
+	width: 100%;
+	height:auto;
+}
+.white{
+	background-color:white;
+	width: 100%;
+	height:auto;
+}
+
+.ggw{
+	width:237px;
+	height:500px;
+	background-color:#657487;
+	/*left:868px; */
+	margin-left:45%; 
+	top:930px;
+	position:absolute;
+}
+
+/*登陆部分*/
+.login_logo{
+	position:absolute;
+	left: 50%;
+	top:20px;
+	margin:0 -100px;
+}
+.line1{
+	position: absolute;
+	left: 50%;
+	top:70px;
+	border:1px solid black;
+	margin:0 -100px;
+	width:400px;
+}
+.line2{
+	position: absolute;
+	left: 50%;
+	top:70px;
+	border:1px solid black;
+	margin:0 -300px;
+	width:400px;
+}
+
+.login_main{
+	position: absolute;
+	left: 50%;
+	top:250px;
+	margin: 0 -130px;
+	width:260px;
+}
+
+.login_gif{
+	position:absolute;
+	left: 50%;
+	top:120px;
+	margin: 0 -240px;
+	z-index: -1;
+
+	
+}
+.register{
+	position:absolute;
+	left:50%;
+	top:20%;
+	margin: 0 -130px;
+	z-index: 1;
+}
+
+.register_main{
+	position: absolute;
+	left: 50%;
+	top:250px;
+	margin: 0 -130px;
+	width:260px;
+}
+.container ul li{
+    list-style: none;
+}
+
+

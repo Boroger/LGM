@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class LoginController extends AdminController
+class LoginController extends Controller
 {
     
     public function login()
@@ -31,6 +31,8 @@ class LoginController extends AdminController
     $state = $admin->field('state')->where("name='$name'")->find();
     session('state',$state['state']);
     session('name',"$name");
+    // var_dump($_SESSION);
+    // die;
 
     //登陆判断处理
     //检查验证码
@@ -63,4 +65,5 @@ class LoginController extends AdminController
         session(null);
         header('Location: Login/login');
     }
+
 }

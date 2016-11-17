@@ -2,9 +2,10 @@
 namespace Admin\Controller;
 use \Think\Controller;
 
-class IndexController extends AdminController 
+class IndexController extends BaseController 
 {
     public function index(){
+
         if ($_SESSION['state'] == 0) {
             $identity = "超级管理员";
         } else {
