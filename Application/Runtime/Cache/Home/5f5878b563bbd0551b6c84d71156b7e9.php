@@ -7,10 +7,10 @@
 	    <title>老干妈</title>
 
 	    <!-- Bootstrap -->
-	    <link href="/roger_www/LGM1116/Public/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/Roger_www/LGM1116/Public/css/bootstrap.min.css" rel="stylesheet">
 
       
-          <link rel="stylesheet" href="/roger_www/LGM1116/Public/home/home.css">
+          <link rel="stylesheet" href="/Roger_www/LGM1116/Public/home/home.css">
       
   	</head>
     
@@ -61,7 +61,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img style="margin-top: -7px" width="70px" src="/roger_www/LGM1116/Public/home/image/logo.jpg"></a>
+      <a class="navbar-brand" href="#"><img style="margin-top: -7px" width="70px" src="/Roger_www/LGM1116/Public/home/image/logo.jpg"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -147,13 +147,13 @@
   <!-- 轮播（Carousel）项目 -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo1" alt="First slide">
+      <img src="/Roger_www/LGM1116/Public/home/image/lunbo1" alt="First slide">
     </div>
     <div class="item">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo2" alt="Second slide">
+      <img src="/Roger_www/LGM1116/Public/home/image/lunbo2" alt="Second slide">
     </div>
     <div class="item">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo3" alt="Third slide">
+      <img src="/Roger_www/LGM1116/Public/home/image/lunbo3" alt="Third slide">
     </div>
   </div>
   <!-- 轮播（Carousel）导航 -->
@@ -177,35 +177,35 @@
 <div class="clear"></div>
 <div class="row">
         <!-- <div class="col-lg-10 col-sm-8">
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
         </div> -->
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/Roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
@@ -232,7 +232,7 @@
                     <div class="white fl col-md-12">
                         <div class="fl">
                             <a href="">
-                              <img style="width:70px;border-radius:50px" src="/roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
+                              <img style="width:70px;border-radius:50px" src="/Roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
                             </a>
                         </div>
                         <div class=" col-lt-3 col-sm-3 col-md-3 fl" >
@@ -247,7 +247,7 @@
                 <div class="clear"></div>
                 <div class="row">
                   <div class="col-mid-12 ">
-                  <div class=""><img style="width:100%" src="/roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
+                  <div class=""><img style="width:100%" src="/Roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
                   </div>
                 </div>
             <div class=" row">
@@ -269,7 +269,7 @@
                     <div class="white fl col-md-12">
                         <div class="fl">
                             <a href="">
-                              <img style="width:70px;border-radius:50px" src="/roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
+                              <img style="width:70px;border-radius:50px" src="/Roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
                             </a>
                         </div>
                         <div class=" col-lt-3 col-sm-3 col-md-3 fl" >
@@ -284,7 +284,7 @@
                 <div class="clear"></div>
                 <div class="row">
                   <div class="col-mid-12 ">
-                  <div class=""><img style="width:100%" src="/roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
+                  <div class=""><img style="width:100%" src="/Roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
                   </div>
                 </div>
             <div class=" row">
@@ -312,10 +312,10 @@
 </div>  <!-- container -->
 
     <!-- jQuery -->
-    <script src="/roger_www/LGM1116/Public/js/jquery.min.js"></script>
+    <script src="/Roger_www/LGM1116/Public/js/jquery.min.js"></script>
     <!-- bootstrap.min.js 必须放在JQ之后!!! -->
-    <script src="/roger_www/LGM1116/Public/js/bootstrap.min.js"></script>
-    <script src="/roger_www/LGM1116/Public/js/holder.min.js"></script>
+    <script src="/Roger_www/LGM1116/Public/js/bootstrap.min.js"></script>
+    <script src="/Roger_www/LGM1116/Public/js/holder.min.js"></script>
 </body>
     <script>
     $(window).scroll(function()

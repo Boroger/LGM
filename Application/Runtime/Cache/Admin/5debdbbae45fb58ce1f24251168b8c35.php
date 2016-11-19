@@ -11,15 +11,15 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/style.css" />
-<link rel="stylesheet" href="/Roger_www/web11152/Public/dist/css/bootstrap.min.css">
-<script src="/Roger_www/web11152/Public/dist/jquery-1.11.3.min.js"></script>
-<script src="/Roger_www/web11152/Public/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" href="/Roger_www/LGM1116/Public/dist/css/bootstrap.min.css">
+<script src="/Roger_www/LGM1116/Public/dist/jquery-1.11.3.min.js"></script>
+<script src="/Roger_www/LGM1116/Public/dist/js/bootstrap.min.js"></script>
 
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -50,10 +50,10 @@
 	</div>
 	<div class="mt-20">
 
-		<table class="table table-bor/Roger_www/web11152/Public/admin/er table-bordered table-bg table-hover table-sort">
+		<table class="table table-bor/Roger_www/LGM1116/Public/admin/er table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
-					<th width="40"><i/Roger_www/web11152/Public/admin/put name="" type="checkbox" value=""></th>
+					<th width="40"><i/Roger_www/LGM1116/Public/admin/put name="" type="checkbox" value=""></th>
 					<th width="40">ID</th>
 					<th width="80">小组名</th>
 					<th width="80">logo</th>
@@ -70,13 +70,13 @@
 					<td><input name="" type="checkbox" value=""></td>
 					<td><?php echo ($v["id"]); ?></td>
 					<td><?php echo ($v["name"]); ?></td>
-					<td><img src="/Roger_www/web11152/<?php echo ($v["logo"]); ?>" width="80" height="30" onclick="group_add('logo','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>1));?>','150','200')"/></td>
+					<td><img src="/Roger_www/LGM1116/<?php echo ($v["logo"]); ?>" width="80" height="30" onclick="group_add('logo','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>1));?>','150','200')"/></td>
 					<td><?php if($v["cid"] == 0): ?>3C数码
 						<?php elseif($v["cid"] == 1): ?>文化
 						<?php elseif($v["cid"] == 2): ?>行摄
 						<?php else: ?>文化<?php endif; ?>
 					</td>
-					<td><img src="/Roger_www/web11152/<?php echo ($v["bgpic"]); ?>" width="100" height="40" onclick="group_add('background','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>2));?>','800','300')"/></td>
+					<td><img src="/Roger_www/LGM1116/<?php echo ($v["bgpic"]); ?>" width="100" height="40" onclick="group_add('background','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>2));?>','800','300')"/></td>
 					<td><?php echo ($v["description"]); ?></td>
 					<td><?php echo ($v["ctime"]); ?></td>
 					<td class="td-manage">
@@ -98,12 +98,12 @@
 		</table>
 	</div>
 </div>
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
 
 function group_add(title,url,w,h){

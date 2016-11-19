@@ -11,10 +11,10 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link href="/Roger_www/web11152/Public/admin/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
-<link href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css" />
-<link href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css" />
-<link href="/Roger_www/web11152/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css" />
+<link href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -65,8 +65,8 @@
   </div>
 </div>
 <div class="footer">Copyright 你的公司名称 by H-ui.admin.v2.3</div>
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
 <script>
     $('#yzm_img').click(function(){
       var yzm_id = $('#yzm_img').attr('src');

@@ -15,10 +15,10 @@
 <script type="text/javascript" src="http://lib.h-ui.net/PIE_IE678.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/css/H-ui.admin.css" />
+<!-- <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/css/H-ui.admin.css" /> -->
 <link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/Hui-iconfont/1.0.7/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="http://lib.h-ui.net/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/skin/default/skin.css" id="skin" />
+<!-- <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/skin/default/skin.css" id="skin" /> -->
 <link rel="stylesheet" type="text/css" href="http://static.h-ui.net/h-ui/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -77,20 +77,20 @@
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">角色：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select class="select" name="state" size="1">
-				<option value="0" <?php if($data["state"] == 0): ?>selected<?php endif; ?> >超级管理员</option>
-				<option value="1" <?php if($data["state"] == 1): ?>selected<?php endif; ?> >总编</option>
-				<option value="2" <?php if($data["state"] == 2): ?>selected<?php endif; ?> >栏目主辑</option>
-				<option value="3" <?php if($data["state"] == 3): ?>selected<?php endif; ?> >栏目编辑</option>
-			</select>	
-			</span>
-			</div>		
+		<div class="formControls col-xs-8 col-sm-7">
+				<table>
+					<?php if(is_array($list3)): $k = 0; $__LIST__ = $list3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?><tr>
+								<td>
+									<input type="checkbox" value="<?php echo ($v["id"]); ?>" name="roleid_<?php echo ($v["id"]); ?>" id="user-Character-0-0-0" style="margin-left:15px;" <?php echo in_array("$v[id]",$list2)?"checked":""; ?> ><?php echo ($v["role"]); ?>
+								</td>
+							</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+				</table>
+		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">备注：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)"><?php echo ($data["description"]); ?></textarea>
+			<textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)"><?php echo ($data["notes"]); ?></textarea>
 			<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
 		</div>
 	</div>
@@ -109,8 +109,8 @@
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/validate-methods.js"></script> 
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/messages_zh.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <!--/_footer /作为公共模版分离出去--> 
 
 <!--请在下方写此页面业务相关的脚本--> 
@@ -126,7 +126,7 @@ $(function(){
 		rules:{
 			name:{
 				required:true,
-				minlength:4,
+				minlength:2,
 				maxlength:16
 			},
 			pass:{

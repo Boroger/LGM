@@ -46,137 +46,22 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">角色权限：</label>
+			<label class="form-label col-xs-4 col-sm-2">拥有权限：</label>
 			<div class="formControls col-xs-8 col-sm-7">
-			<!-- ****************************写手动全部节点**************************************** -->
 				<dl class="permission-list">
 					<dt>
 						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							管理员模块</label>
+							<input type="checkbox" value="" name="" id="user-Character-0">全选
+						</label>
 					</dt>
 					<dd>
-						<dl class="cl permission-list2">
-							<dt>
+						<volist name="list" id="v" key="k">
 								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="1" name="permid_1" id="">
-									添加</label>
-								<label class="">
-									<input type="checkbox" value="2" name="permid_2" id="">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="3" name="permid_3" id="">
-									修改</label>
-								<label class="">
-									<input type="checkbox" value="4" name="permid_4" id="">
-									查看</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
+									<input type="checkbox" value="<{$v.id}>" name="permid_<{$v.id}>" id="user-Character-0-0-0" style="margin-left:15px;"><{$v.perm}>
+								</label>
+						</volist>
 					</dd>
 				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							用户模块</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="4" name="permid_4" id="">
-									添加</label>
-								<label class="">
-									<input type="checkbox" value="5" name="permid_5" id="">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="6" name="permid_6" id="">
-									修改</label>
-								<label class="">
-									<input type="checkbox" value="7" name="permid_7" id="">
-									查看</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							帖子模块</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="9" name="permid_9" id="">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="10" name="permid_10" id="">
-									删除</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							回复模块</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="11" name="permid_11" id="">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="12" name="permid_12" id="">
-									删除</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
 			</div>
 		</div>
 		<div class="row cl">

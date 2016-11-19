@@ -29,6 +29,11 @@
 <title>添加管理员 - 管理员管理</title>
 <meta name="keywords" content="H-ui.admin v2.3,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
 <meta name="description" content="H-ui.admin v2.3，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+<style type="text/css">
+	table{
+		border: 1px solid #ddd;
+	}
+</style>
 </head>
 <body>
 <article class="page-container">
@@ -37,25 +42,25 @@
 
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员：</label>
-		<div class="formControls col-xs-8 col-sm-9">
+		<div class="formControls col-xs-8 col-sm-7">
 			<input type="text" class="input-text" value="" placeholder="" id="adminName" name="name">
 		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>初始密码：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="password" name="pass">
+		<div class="formControls col-xs-8 col-sm-7">
+			<input type="password" class="input-text" autocomplete="off" vallue="" placeholder="密码" id="password" name="pass">
 		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
-		<div class="formControls col-xs-8 col-sm-9">
+		<div class="formControls col-xs-8 col-sm-7">
 			<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="password2" name="password2">
 		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>性别：</label>
-		<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+		<div class="formControls col-xs-8 col-sm-7 skin-minimal">
 			<div class="radio-box">
 				<input name="sex" type="radio" id="sex-1"  value="1" checked>男
 			</div>
@@ -66,30 +71,31 @@
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
-		<div class="formControls col-xs-8 col-sm-9">
+		<div class="formControls col-xs-8 col-sm-7">
 			<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
 		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
-		<div class="formControls col-xs-8 col-sm-9">
+		<div class="formControls col-xs-8 col-sm-7">
 			<input type="text" class="input-text" placeholder="@" name="email" id="email">
 		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">角色：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select class="select" name="state" size="1">
-				<option value="0">超级管理员</option>
-				<option value="1">总编</option>
-				<option value="2">栏目主辑</option>
-				<option value="3">栏目编辑</option>
-			</select>
-			</span> </div>
+		<div class="formControls col-xs-8 col-sm-7">
+				<table>
+					<?php if(is_array($data)): $k = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($k % 2 );++$k;?><tr>
+								<td>
+									<input type="checkbox" value="<?php echo ($v["id"]); ?>" name="roleid_<?php echo ($v["id"]); ?>" id="user-Character-0-0-0" style="margin-left:15px;"><?php echo ($v["role"]); ?>
+								</td>
+							</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+				</table>
+		</div>
 	</div>
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">备注：</label>
-		<div class="formControls col-xs-8 col-sm-9">
+		<div class="formControls col-xs-8 col-sm-7">
 			<textarea name="notes" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)"></textarea>
 			<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
 		</div>
@@ -109,8 +115,8 @@
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/validate-methods.js"></script> 
 <script type="text/javascript" src="http://lib.h-ui.net/jquery.validation/1.14.0/messages_zh.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <!--/_footer /作为公共模版分离出去--> 
 
 <!--请在下方写此页面业务相关的脚本--> 
@@ -126,7 +132,7 @@ $(function(){
 		rules:{
 			name:{
 				required:true,
-				minlength:4,
+				minlength:2,
 				maxlength:16
 			},
 			pass:{

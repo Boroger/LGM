@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1><{$title}></h1>
+	<h4>系统保留量</h4>
+	<p><{$Think.get.id}></p>
+	<p><{:var_dump($_GET)}></p>
+
+	<h4>常量</h4>
+	<p>PHP版本:<{$Think.const.PHP_VERSION}></p>
+	<p>当前模块:<{$Think.const.MODULE_NAME}></p>
+	<p>当前控制器:<{$Think.const.CONTROLLER_NAME}></p>
+	<p>当前操作:<{$Think.const.ACTION_NAME}></p>
+
+	<h4>模板替换变量</h4>
+	<p>__PUBLIC__</p>
+	<p>__APP__</p>
+	<p>__ROOT__</p>
+	<p>__MODULE__</p>
+	<p>__CONTROLLER__</p>
+	<p>__ACTION__</p>
+	<P>__SELF__</p>
+	<p>__UPLOAD__</p>
+</body>
+</html>
