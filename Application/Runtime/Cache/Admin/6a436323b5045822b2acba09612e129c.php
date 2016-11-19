@@ -11,19 +11,19 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<link rel="stylesheet" href="/Roger_www/LGM1116/Public/dist/css/bootstrap.min.css">
-<script src="/Roger_www/LGM1116/Public/dist/jquery-1.11.3.min.js"></script>
-<script src="/Roger_www/LGM1116/Public/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/LGM1116/Public/dist/css/bootstrap.min.css">
+<script src="/LGM1116/Public/dist/jquery-1.11.3.min.js"></script>
+<script src="/LGM1116/Public/dist/js/bootstrap.min.js"></script>
 <title>资讯列表</title>
 </head>
 <body>
@@ -55,7 +55,7 @@
 					<td><input type="checkbox" value="" name=""></td>
 					<td><?php echo ($v["id"]); ?></td>
 					<td><?php echo ($v["title"]); ?></td>
-					<td><img src="/Roger_www/LGM1116/<?php echo ($v["bgpic"]); ?>" width="120"  height="40"/></td>
+					<td><img src="/LGM1116/<?php echo ($v["bgpic"]); ?>" width="120"  height="40"/></td>
 					<td><?php if($v["state"] == 1): ?>是
 					    <?php else: ?>否<?php endif; ?>
 					</td>
@@ -90,12 +90,12 @@
 		</table>
 	</div>
 </div>
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
 var num = 1;
 var where = '';

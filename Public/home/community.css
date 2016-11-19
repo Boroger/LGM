@@ -1,5 +1,6 @@
 a{text-decoration: none;}
 *{padding:0;margin:0;}
+
 .fl{
     float:left;
 }
@@ -43,4 +44,20 @@ a{text-decoration: none;}
 }
 .hover:hover{
     color:red;
+}
+#com_name{
+    text-decoration: none;
+}
+#com_name:hover{
+color:#fd8c7d;
+}
+#com_title a{
+    text-decoration: none;
+}
+#com_entr{
+    text-decoration: none;
+    cursor:pointer;
+    margin-top:24px;
+    color:#fd8c7d;
+    font-size:14px
 }

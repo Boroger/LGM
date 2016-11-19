@@ -2,122 +2,313 @@
 <block name="link">
     <link rel="stylesheet" href="__PUBLIC__/home/community.css">
     <link rel="stylesheet" href="__PUBLIC__/home/home.css">
+    <script src="__PUBLIC__/dist/jquery-1.11.3.min.js"></script>
+    <script src="__PUBLIC__/dist/js/bootstrap.min.js"></script>
     <!-- 边框颜色 #222  #BBB  字#666 #111 -->
 </block>
-<block name="scroll"></block>
 
 <block name="daohang">
-    <li><a href="#">首页</a></li>
-    <li class="active"><a href="#">社区</a></li>
+    <li ><a href="<{:U('Home/Index/index')}>">首页</a></li>
+    <li class="active"><a href="<{:U('Home/Community/index')}>">社区</a></li>
 </block>
 <block name="main">
-<div class="container border">
-    <div class="border" style="">
+
+<div class="container">
+    <div class="" style="">
         <!-- 4个小组 -->
-        <div class="">
-            <a href="" class="type fl" style="color:#111">3C数码</a>
-            <a href="" class="type fl" style="color:#737474">文化</a>
-            <a href="" class="type fl" style="color:#737474">行摄</a>
-            <a href="" class="type fl" style="color:#737474">LGM</a>
-                <p style="margin-right:15%" class="type fr border">活跃小组</p>
+        <div class="" style="margin-top:20px">
+            <a href="<{:U('Community/group',array(cid=>0))}>" class="type fl" style="color:#111">3C数码</a>
+            <a href="<{:U('Community/group',array(cid=>1))}>" class="type fl" style="color:#737474">文化</a>
+            <a href="<{:U('community/group',array(cid=>2))}>" class="type fl" style="color:#737474">行摄</a>
+            <a href="<{:U('community/group',array(cid=>3))}>" class="type fl" style="color:#737474">LGM</a>
+            <p style="margin-right:15%" class="type fr">活跃小组</p>
 
         </div>
 
             
-        <div class="clear" style="width:100px"></div>
+ <!--        <div class="clear" style="width:50px"></div> -->
 
-        <div class="fl border group_content mt30" style="border:1px solid #BBB;border-top:2px solid #222">
-            <div class="">
+        <div class="fl" style="margin-top:-20px">
+            <div class=" fr" style="width:25%;">
+
+
+                <div>  <!-- 复制一整块为右侧三个小组 -->
+                    <div class="fr" style="border:1px solid #eee;padding:10px;margin-top:30px; ">
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                        <div style="border-top:1px solid #eee"></div>   
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                        <div style="border-top:1px solid #eee"></div>
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class=" mt20" style="">
+                    <p style="font-size: 18px;" class=" ">最新小组</p>
+                </div>
+
+                <div>  <!-- 复制一整块为右侧三个小组 -->
+                    <div class="fr" style="border:1px solid #BBB;padding:10px;margin-top:10px; ">
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                        <div style="border-top:2px solid #BBB"></div>   
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                        <div style="border-top:2px solid #BBB"></div>
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;" class="fl"><a style="font-size:18px;color:#111" href="">手机研究所</a></div>
+                                <div style="margin-top: 2px" class="fr"><a style="font-size:14px;color:#111;" href="">进入小组></a></div>
+                            </div>
+
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top: 3px">13216&nbsp;&nbsp;&nbsp;人聚集于此 &nbsp;&nbsp;</span>
+                            </div>
+                            <div class="fr">
+                                <span class="fr" style="font-size:10px;margin-left:10px;margin-top: 3px">4855&nbsp;&nbsp;帖子</span>
+                            </div>   
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">小桌面，大世界，就算是在方寸之间也有不一样的风景画面，DIY自定义最独特的...</p></div> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class=" mt20" style="">
+                    <p class="fl" style="font-size: 14px; color:#666" class=" ">没有找到自己心仪的小组？</p>
+                    <a href="" class="fr" style="font-size: 14px; color:#111">+申请新建小组</a>
+                </div>
+
+                <div class="clear"></div>
+                <div class=" " style="margin-top:5px ">
+                    <p style="font-size: 18px;" class=" ">小组达人榜</p>
+                </div>
+
+                <!-- <div>  
+                    <div class="fr" style="border:1px solid #BBB;padding:10px;margin-top:10px; ">
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" style="border-radius:50% " src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;margin-top: 5px" class="fl">
+                                    <a class="fl" style="font-size:16px;color:#111" href="">红尘望浮生阿斯顿&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                    <p class="fl" style="width:18px;height:18px;line-height:18px;text-align:center;border-radius:50%;background-color:#38A0E1;margin-top:3px;color:white">5</p>
+
+                                </div>
+                            </div>
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top:-5px">精品帖数&nbsp;&nbsp;&nbsp;222&nbsp;&nbsp;</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">发表的&nbsp;&nbsp; <a style="color:#38a0e1" href="">一个来自帝都码农的恋物阿斯顿......</a> &nbsp;&nbsp; 被加精</p></div> 
+                        </div> 
+                    </div>
+                </div> -->
+                <div>  
+                    <div class="fr" style="border:1px solid #BBB;padding:10px;margin-top:10px; ">
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" style="border-radius:50% " src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;margin-top: 5px" class="fl">
+                                    <a class="fl" style="font-size:16px;color:#111" href="">红尘望浮生阿斯顿&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                    <p class="fl" style="width:18px;height:18px;line-height:18px;text-align:center;border-radius:50%;background-color:#38A0E1;margin-top:3px;color:white">5</p>
+
+                                </div>
+                            </div>
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top:-5px">精品帖数&nbsp;&nbsp;&nbsp;222&nbsp;&nbsp;</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">发表的&nbsp;&nbsp; <a style="color:#38a0e1" href="">一个来自帝都码农的恋物阿斯顿......</a> &nbsp;&nbsp; 被加精</p></div> 
+                        </div> 
+                        <div style="border-top:2px solid #BBB"></div>  
+
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" style="border-radius:50% " src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;margin-top: 5px" class="fl">
+                                    <a class="fl" style="font-size:16px;color:#111" href="">红尘望浮生阿斯顿&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                    <p class="fl" style="width:18px;height:18px;line-height:18px;text-align:center;border-radius:50%;background-color:#38A0E1;margin-top:3px;color:white">5</p>
+
+                                </div>
+                            </div>
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top:-5px">精品帖数&nbsp;&nbsp;&nbsp;222&nbsp;&nbsp;</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">发表的&nbsp;&nbsp; <a style="color:#38a0e1" href="">一个来自帝都码农的恋物阿斯顿......</a> &nbsp;&nbsp; 被加精</p></div> 
+                        </div> 
+                        <div style="border-top:2px solid #BBB"></div>  
+
+
+                        <div class="mt10">
+                            <div class="fl">
+                                <img width="50px" style="border-radius:50% " src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                            </div>
+                            <div >
+                                <div style="margin-left:10px;margin-top: 5px" class="fl">
+                                    <a class="fl" style="font-size:16px;color:#111" href="">红尘望浮生阿斯顿&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                    <p class="fl" style="width:18px;height:18px;line-height:18px;text-align:center;border-radius:50%;background-color:#38A0E1;margin-top:3px;color:white">5</p>
+
+                                </div>
+                            </div>
+                            <div class="fl">
+                                <span class="fl" style="font-size:10px;margin-left:10px;margin-top:-5px">精品帖数&nbsp;&nbsp;&nbsp;222&nbsp;&nbsp;</span>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <div class="mt10"><p style="color:#666">发表的&nbsp;&nbsp; <a style="color:#38a0e1" href="">一个来自帝都码农的恋物阿斯顿......</a> &nbsp;&nbsp; 被加精</p></div> 
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+            
+           <foreach name="list" item="v">
+
+            <!-- 小组遍历此处 -->
+            <div class="fl border group_content mt30" style="border:1px solid #eee;border-top:2px solid #fd6649;">
                 <div>
-                    <div class="fl" style="width:14%">
-                        <img src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
+                    <div>
+                        <div class="fl" style="width:14%">
+                            <img src="__ROOT__<{$v.logo}>"width=70 height=70 alt="">
+                        </div>
+                        <div class="fl type1" style="width:65%;margin-top:10px">
+                            <a style="color:#111;font-family:'黑体'" id="com_name" href="<{:U('group/index',array(gid=>$v['id']))}>"><{$v.name}></a><br>
+                            <span class="group_zi" style="font-size:14px;cursor:default;"><{$v.pnum}>&nbsp;人聚集于此 &nbsp;&nbsp;<{$v.tnum}>&nbsp;帖子</span>
+                        </div>
+                        <div class="fr"><a id="com_entr" href="<{:U('enter')}>">进入小组></a></div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="fl type1" style="width:65%;margin-top:10px">
-                        <a style="color:#111" href="">手机研究所</a><br>
-                        <span class="group_zi" style="font-size:14px;cursor:default;">13216&nbsp;人聚集于此 &nbsp;&nbsp;4855&nbsp;帖子</span>
+                </div>
+                <div class="mt10 group_zi"><span style="font-size:17px"><{$v.description}></span></div>
+                <div class="mt20" style="border-top:1px solid #BBB"></div>  
+                <div class="mt10">
+                    <div class="mt10" id="com_title">
+                        <a style="color:#555;font-size:16px;" href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
+                        <div class="fr">
+                            <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
+                            <p class="glyphicon glyphicon-cloud"></p>200</span>
+                        </div>
+                        
                     </div>
-                    <div class="fr hover" style="margin-top:24px;color:#222;font-size:16px"><span style="cursor:pointer">+ 加入小组</span></div>
-                    <div class="clear"></div>
+
                 </div>
             </div>
-            <div class="mt10 group_zi"><span style="font-size:18px">现在二十四小时不离身的不是女朋友，也不是男朋友，是手机！手机测评、手机推荐、以及怎么玩手机？ 这里手机控的天堂。</span></div>
-            <div class="mt20" style="border-top:1px solid #BBB"></div>  
-            <div class="mt10">
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px; " href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px" href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px" href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                
-            </div>
+            </foreach>
+
         </div>
         
-        <!-- <div class="border group_content mt30" style="border:1px solid #BBB;border-top:2px solid #222">
-            <div class="">
-                <div>
-                    <div class="fl" style="width:14%">
-                        <img src="__PUBLIC__/home/image/grouphead1.jpg" alt="">
-                    </div>
-                    <div class="fl type1" style="width:65%;margin-top:10px">
-                        <a style="color:#111" href="">手机研究所</a><br>
-                        <span class="group_zi" style="font-size:14px;cursor:default;">13216&nbsp;人聚集于此 &nbsp;&nbsp;4855&nbsp;帖子</span>
-                    </div>
-                    <div class="fr hover" style="margin-top:24px;color:#222;font-size:16px"><span style="cursor:pointer">+ 加入小组</span></div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="mt10 group_zi"><span style="font-size:18px">现在二十四小时不离身的不是女朋友，也不是男朋友，是手机！手机测评、手机推荐、以及怎么玩手机？ 这里手机控的天堂。</span></div>
-            <div class="mt20" style="border-top:1px solid #BBB"></div>  
-            <div class="mt10">
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px; " href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px" href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                <div class="mt10">
-                    <a class="hover " style="color:#111;font-size: 19px" href="">屏幕炸屏幕炸,屏幕炸完天线炸!|记iPhone 7【天线门】</a>
-                    <div class="fr">
-                        <span style="color:#666"><p style='margin-top:3px' class="glyphicon glyphicon-eye-open"></p>200&nbsp;
-                        <p class="glyphicon glyphicon-cloud"></p>200</span>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div> -->
-
-        <!-- 右侧小组 -->
-
     </div>
     </div>    <!-- container -->  
+    <div style="width:100%;height:50px;margin-top:100px;background-color: #222">
+        <img style="height:50px;margin-left:2% " src="__PUBLIC__/home/image/logo.jpg" alt="">
+        <img style="height:30px;" src="__PUBLIC__/home/image/logozi.jpg" alt="">
+        <p class="fr" style="color:#f0f0f0;height:50px;line-height: 50px">TECHNOLOGY STAYS TRUE HERE  |  © 2016 LGM | 苏ICP备12076188号-1 </p>
+    </div>
+    <script>
+        $('.hover').mouseover(function(){
+            $(this).css("color",'#38a0e1');
+        })
+        $('.hover').mouseout(function(){
+            $(this).css("color",'#111');
+        })
+    </script>
 </block>

@@ -1,4 +1,4 @@
-﻿<!--_meta 作为公共模版分离出去-->
+﻿__PUBLIC__/admin/<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -32,156 +32,94 @@
 </head>
 <body>
 <article class="page-container">
-	<form action="<{:U('Admin/roleDoAdd')}>" method="post" class="form form-horizontal" id="form-admin-role-add">
+	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>角色名称：</label>
-			<div class="formControls col-xs-8 col-sm-7">
-				<input type="text" class="input-text" value="" placeholder="" id="roleName" name="role" datatype="*4-16" nullmsg="用户账户不能为空">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="roleName" name="roleName" datatype="*4-16" nullmsg="用户账户不能为空">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">说明：</label>
-			<div class="formControls col-xs-8 col-sm-7">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="description">
+			<label class="form-label col-xs-4 col-sm-3">说明：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="" name="">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">角色权限：</label>
-			<div class="formControls col-xs-8 col-sm-7">
-			<!-- ****************************写手动全部节点**************************************** -->
+			<label class="form-label col-xs-4 col-sm-3">拥有权限：</label>
+			<div class="formControls col-xs-8 col-sm-9">
 				<dl class="permission-list">
 					<dt>
 						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							管理员模块</label>
+							<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
+							资讯管理</label>
 					</dt>
 					<dd>
 						<dl class="cl permission-list2">
 							<dt>
 								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
+									<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
+									栏目管理</label>
 							</dt>
 							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
 								<label class="">
-									<input type="checkbox" value="1" name="permid_1" id="">
+									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-0">
 									添加</label>
 								<label class="">
-									<input type="checkbox" value="2" name="permid_2" id="">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="3" name="permid_3" id="">
+									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-1">
 									修改</label>
 								<label class="">
-									<input type="checkbox" value="4" name="permid_4" id="">
+									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-2">
+									删除</label>
+								<label class="">
+									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-3">
 									查看</label>
-								<!-- <label class="">
+								<label class="">
 									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
+									审核</label>
+								<label class="c-orange"><input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-5"> 只能操作自己发布的</label>
 							</dd>
 						</dl>
 					</dd>
 				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
 				<dl class="permission-list">
 					<dt>
 						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							用户模块</label>
+							<input type="checkbox" value="" name="user-Character-0" id="user-Character-1">
+							用户中心</label>
 					</dt>
 					<dd>
 						<dl class="cl permission-list2">
 							<dt>
 								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
+									<input type="checkbox" value="" name="user-Character-1-0" id="user-Character-1-0">
+									用户管理</label>
 							</dt>
 							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
 								<label class="">
-									<input type="checkbox" value="4" name="permid_4" id="">
+									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-0">
 									添加</label>
 								<label class="">
-									<input type="checkbox" value="5" name="permid_5" id="">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="6" name="permid_6" id="">
+									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-1">
 									修改</label>
 								<label class="">
-									<input type="checkbox" value="7" name="permid_7" id="">
-									查看</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							帖子模块</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="9" name="permid_9" id="">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="10" name="permid_10" id="">
+									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-2">
 									删除</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<!-- <input type="checkbox" value="" name="user-Character-0" id="user-Character-0"> -->
-							回复模块</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
 								<label class="">
-									<input type="checkbox" value="" name="" id="user-Character-0-0">
-									全选</label>
-							</dt>
-							<dd>
-								<!-- value对应权限节点id，name规定格式为permid_节点id -->
-								<label class="">
-									<input type="checkbox" value="11" name="permid_11" id="">
+									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-3">
 									查看</label>
 								<label class="">
-									<input type="checkbox" value="12" name="permid_12" id="">
-									删除</label>
-								<!-- <label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label> -->
+									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-4">
+									审核</label>
 							</dd>
 						</dl>
 					</dd>
 				</dl>
-				<!-- ************************************一个部分到此结束****************************************** -->
 			</div>
 		</div>
 		<div class="row cl">
-			<div class="col-xs-8 col-sm-7 col-xs-offset-4 col-sm-offset-2">
-				<button type="submit" class="btn btn-success radius" id="admin-role-save" name=""><i class="icon-ok"></i> 确定</button>
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<button type="submit" class="btn btn-success radius" id="admin-role-save" name="admin-role-save"><i class="icon-ok"></i> 确定</button>
 			</div>
 		</div>
 	</form>

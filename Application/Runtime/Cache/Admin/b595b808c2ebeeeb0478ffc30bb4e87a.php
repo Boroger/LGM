@@ -13,12 +13,12 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -98,9 +98,9 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 帖子管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
-					<li><a _href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>
-					<li><a _href="product-list.html" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
+					<li><a _href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">帖子列表</a></li>
+					<li><a _href="product-category.html" data-title="分类管理" href="javascript:void(0)">评论列表</a></li>
+					<li><a _href="product-list.html" data-title="产品管理" href="javascript:void(0)">申请列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -182,10 +182,10 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
 /*资讯-添加*/
 function article_add(title,url){

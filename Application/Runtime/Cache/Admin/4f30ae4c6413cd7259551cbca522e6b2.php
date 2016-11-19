@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div>
-	<img src="/Roger_www/web11152/<?php echo ($v); ?>">
+	<img src="/LGM1116/<?php echo ($v); ?>">
 	</div>
 </body>
 </html>

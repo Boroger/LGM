@@ -1,0 +1,29 @@
+#postadd_a{
+	border:1px solid #ccc;
+	/*height:600px;*/
+	margin-top:30px;
+}
+#postadd_title{
+	margin:20px 0 0 30px;
+	border:1px solid #ccc;
+	height:50px;
+	background: #fafcff;
+}
+#postadd_sele{
+	margin: 20px 0 0 30px;
+	height: 50px;
+	background: #fafcff;
+}
+#postadd_mye{
+	margin-left: 15px;
+	margin-top:30px;
+	background: #fafcff;
+	/*height: 100px;*/
+	position: relative;
+}
+#postadd_glan{
+	width:100px;
+	margin-left:650px;
+	position: absolute;
+	right: 0px;
+}

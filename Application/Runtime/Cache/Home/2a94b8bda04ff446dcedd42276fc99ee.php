@@ -4,24 +4,30 @@
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>老干妈</title>
-
-	    <!-- Bootstrap -->
-	    <link href="/roger_www/LGM1116/Public/css/bootstrap.min.css" rel="stylesheet">
-
+      <!-- Bootstrap -->
+ 
       
-          <link rel="stylesheet" href="/roger_www/LGM1116/Public/home/home.css">
+	    <title>LGM</title>
+      <link rel="stylesheet" href="/LGM1116/Public/home/home.css">
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
       
-  	</head>
+
+    <link rel="stylesheet" href="/LGM1116/Public/dist/css/bootstrap.min.css">
+    <style>
+       body{
+            font-family: "Helvitica Neue",Helvitica,Arial,"Hiragino Sans GB","Microsoft YaHei","Arial Regular","Microsoft JhengHei",sans-serif;
+       }
+   
+    </style>
+      
+    </head>
     
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 
 <script type="text/javascript">
     var totalheight = 0;     //定义一个总的高度变量
     function loa动态加载数据ata()
     { 
         totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());     //浏览器的高度加上滚动条的高度 
-
         if ($(document).height() <= totalheight)     //当文档的高度小于或者等于总的高度的时候，开始动态加载数据
         {   
           $.ajax({
@@ -36,21 +42,18 @@
           });
         }
     } 
-
     $(window).scroll( function() { 
-        console.log("滚动条到顶部的垂直高度: "+$(document).scrollTop()); 
-        console.log('浏览器的高度：'+$(window).height());
-        console.log("页面的文档高度 ："+$(document).height());
-        console.log(totalheight);
+        // console.log("滚动条到顶部的垂直高度: "+$(document).scrollTop()); 
+        // console.log('浏览器的高度：'+$(window).height());
+        // console.log("页面的文档高度 ："+$(document).height());
+        // console.log(totalheight);
         loa动态加载数据ata();
     }); 
 
 </script>
 
 
-
-<body style="background-color: #f0f0f0">
-
+<body style='background-color:#fafcff;'>
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,15 +64,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img style="margin-top: -7px" width="70px" src="/roger_www/LGM1116/Public/home/image/logo.jpg"></a>
+      <a class="navbar-brand" href="#"><img style="margin-top: -7px" width="70px" src="/LGM1116/Public/home/image/logo.jpg"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         
-        <li class="active"><a href="#">首页</a></li>
-        <li><a href="#">社区</a></li>
+        <li class="active"><a href="<?php echo U('Home/Index/index');?>">首页</a></li>
+        <li><a href="<?php echo U('Home/Community/index');?>">社区</a></li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -92,10 +95,10 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li>
-           <a href="Home/Login/login">登录</a>
+           <a href="<?php echo U('Home/Login/login');?>">登录</a>
         </li>
         <li>
-           <a href="Home/Register/register">注册</a>
+           <a href="<?php echo U('Home/Register/register');?>">注册</a>
         </li>
          
         <li class="dropdown">
@@ -147,13 +150,13 @@
   <!-- 轮播（Carousel）项目 -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo1" alt="First slide">
+      <img src="/LGM1116/Public/home/image/lunbo1" alt="First slide">
     </div>
     <div class="item">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo2" alt="Second slide">
+      <img src="/LGM1116/Public/home/image/lunbo2" alt="Second slide">
     </div>
     <div class="item">
-      <img src="/roger_www/LGM1116/Public/home/image/lunbo3" alt="Third slide">
+      <img src="/LGM1116/Public/home/image/lunbo3" alt="Third slide">
     </div>
   </div>
   <!-- 轮播（Carousel）导航 -->
@@ -177,35 +180,35 @@
 <div class="clear"></div>
 <div class="row">
         <!-- <div class="col-lg-10 col-sm-8">
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
-            <div class="fl rec_img"><img style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="">
+            <div class="fl rec_img"><img style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="">
             </div>
         </div> -->
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="row">
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
             <div class="col-sm-6 col-md-3">
-                  <img  style="border-radius: 5%" src="/roger_www/LGM1116/Public/home/image/recommend1.jpg" alt="...">
+                  <img  style="border-radius: 5%" src="/LGM1116/Public/home/image/recommend1.jpg" alt="...">
                   <div class="caption">
                   </div>
             </div>
@@ -232,7 +235,7 @@
                     <div class="white fl col-md-12">
                         <div class="fl">
                             <a href="">
-                              <img style="width:70px;border-radius:50px" src="/roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
+                              <img style="width:70px;border-radius:50px" src="/LGM1116/Public/home/image/head1.jpg" alt="">
                             </a>
                         </div>
                         <div class=" col-lt-3 col-sm-3 col-md-3 fl" >
@@ -247,7 +250,7 @@
                 <div class="clear"></div>
                 <div class="row">
                   <div class="col-mid-12 ">
-                  <div class=""><img style="width:100%" src="/roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
+                  <div class=""><img style="width:100%" src="/LGM1116/Public/home/image/title1.jpg" alt=""></div>
                   </div>
                 </div>
             <div class=" row">
@@ -269,7 +272,7 @@
                     <div class="white fl col-md-12">
                         <div class="fl">
                             <a href="">
-                              <img style="width:70px;border-radius:50px" src="/roger_www/LGM1116/Public/home/image/head1.jpg" alt="">
+                              <img style="width:70px;border-radius:50px" src="/LGM1116/Public/home/image/head1.jpg" alt="">
                             </a>
                         </div>
                         <div class=" col-lt-3 col-sm-3 col-md-3 fl" >
@@ -284,7 +287,7 @@
                 <div class="clear"></div>
                 <div class="row">
                   <div class="col-mid-12 ">
-                  <div class=""><img style="width:100%" src="/roger_www/LGM1116/Public/home/image/title1.jpg" alt=""></div>
+                  <div class=""><img style="width:100%" src="/LGM1116/Public/home/image/title1.jpg" alt=""></div>
                   </div>
                 </div>
             <div class=" row">
@@ -311,22 +314,19 @@
     <div class="ggw" id="ggw"></div>  
 </div>  <!-- container -->
 
-    <!-- jQuery -->
-    <script src="/roger_www/LGM1116/Public/js/jquery.min.js"></script>
-    <!-- bootstrap.min.js 必须放在JQ之后!!! -->
-    <script src="/roger_www/LGM1116/Public/js/bootstrap.min.js"></script>
-    <script src="/roger_www/LGM1116/Public/js/holder.min.js"></script>
 </body>
-    <script>
-    $(window).scroll(function()
-    {
-      var st = $(this).scrollTop();
-      console.log(st);
-      if (st>920) {
-        $('#ggw').css({position:"fixed",top:"70px"});
-      } else{
-        $('#ggw').css({position:"absolute",top:"930px"});
-      }
-    });
+
+<script>
+$(window).scroll(function()
+{
+  var st = $(this).scrollTop();
+  // console.log(st);
+  if (st>920) {
+    $('#ggw').css({position:"fixed",top:"70px"});
+  } else{
+    $('#ggw').css({position:"absolute",top:"930px"});
+  }
+});
 </script>
+
 </html>

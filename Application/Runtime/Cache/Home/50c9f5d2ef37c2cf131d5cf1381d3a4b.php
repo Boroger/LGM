@@ -14,28 +14,28 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-	    <link rel="stylesheet" href="/Roger_www/LGM1116/Public/home/home.css">
-	    <link rel="stylesheet" href="/Roger_www/LGM1116/Public/js/jquery.min.js">
-		<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
+	    <link rel="stylesheet" href="/LGM1116/Public/home/home.css">
+	    <link rel="stylesheet" href="/LGM1116/Public/js/jquery.min.js">
+		<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/icheck/icheck.css" />
 	<title>登录</title>
 </head>
 <body style="background-color: #f2f2f2">
 <div>     
 	<div class="line1"></div>
 	<div class="line2"></div>
-	<a href="Home/index/index">
+	<a href="<?php echo u('Home/Index/index');?>">
 		<div class="login_logo">
-			<img width="200px" src="/Roger_www/LGM1116/Public/home/image/biglogo.jpg" alt="">
+			<img width="200px" src="/LGM1116/Public/home/image/biglogo.jpg" alt="">
 		</div>
 	</a>
 	<!-- 继承的id -->
@@ -61,30 +61,30 @@
 		</div>
 
 		<div class="row">
-			<p style="color:white" class="fr">还没有账号,<a style="text-decoration: none;color:white;" href=""><b>立即注册</b></a></p>
+			<p style="color:white" class="fr">还没有账号,<a style="text-decoration: none;color:white;" href="<?php echo U('Home/Register/register');?>"><b>立即注册</b></a></p>
 		</div>
 		</form>
 	</div>
 		<div class="login_gif">
-			<img style="width:480px; border-radius: 50%;" src="/Roger_www/LGM1116/Public/home/image/login.gif" alt="">
+			<img style="width:480px; border-radius: 50%;" src="/LGM1116/Public/home/image/login.gif" alt="">
 		</div>
 </div>
 	
 </body>
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script>  
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/laypage/1.2/laypage.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/icheck/jquery.icheck.min.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
-	<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script>  
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/laypage/1.2/laypage.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/icheck/jquery.icheck.min.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
+	<script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 
 	<script>
 		$(function(){

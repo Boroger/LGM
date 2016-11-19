@@ -13,12 +13,12 @@
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <script type="text/javascript" src="lib/PIE_IE678.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Roger_www/web11152/Public/admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -38,19 +38,20 @@
 			<input type="text" class="input-text" style="width:250px" placeholder="输入管理员登录名" id="search" name="search">
 			<button type="submit" class="btn btn-success" id="" name="search" onclick="searchuser(this)"><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 		</div>
-		<div class="cl pd-5 bg-1 bk-gray mt-20"> <a href="<?php echo U('adminAdd');?>" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a></span> <span class="r">共有数据：<strong><?php echo ($totals); ?></strong> 条</span> </div>
+		<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加管理员','<?php echo U('adminAdd');?>','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a></span> <span class="r">共有数据：<strong><?php echo ($totals); ?></strong> 条</span> </div>
 		<table class="table table-border table-bordered table-bg">
 			<thead>
 				<tr>
-					<th scope="col" colspan="9">管理员列表</th>
+					<th scope="col" colspan="10">管理员列表</th>
 				</tr>
 				<tr class="text-c">
+					<th width="25"><input type="checkbox" name="" value=""></th>
 					<th width="40">ID</th>
 					<th width="150">登录名</th>
 					<th width="40">性别</th>
 					<th width="90">手机</th>
-					<th width="190">邮箱</th>
-					<th width="50">查看角色</th>
+					<th width="150">邮箱</th>
+					<th width="90">角色</th>
 					<th width="130">创建时间</th>
 					<th width="80">是否启用</th>
 					<th width="120">操作</th>
@@ -58,6 +59,7 @@
 			</thead>
 			<tbody>
 				<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr class="text-c">
+						<td><input type="checkbox" value="1" name=""></td>
 						<td><?php echo ($v["id"]); ?></td>
 						<td><?php echo ($v["name"]); ?></td>
 						<td>
@@ -67,19 +69,22 @@
 						<td><?php echo ($v["phone"]); ?></td>
 						<td><?php echo ($v["email"]); ?></td>
 						<td>
-							<a title="查看角色" href="javascript:;" onclick="checkRole('查看角色','<?php echo U('checkRole',array('id'=>$v['id']));?>','','400','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6bf;</i></a>
+							<?php if($v["state"] == '0'): ?>超级管理员
+	                   		<?php elseif($v["state"] == '1'): ?>普通管理员
+	                   		<?php else: ?>死变态<?php endif; ?>
 						</td>
 						<td><?php echo ($v["date"]); ?></td>
 						<td class="td-status">
 							<?php if($v["state"] == '1'): ?><span class="label radius">已停用</span>
-	            <?php else: ?><span class="label label-success radius">已启用</span><?php endif; ?>
+	                   		<?php else: ?><span class="label label-success radius">已启用</span><?php endif; ?>
 						</td>
 						<td class="td-manage">
-							<?php if($v["state"] == '1'): ?><a style="text-decoration:none" onClick="admin_start(this,'<?php echo ($v["id"]); ?>')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe631;</i></a> 
-	            <?php else: ?><a style="text-decoration:none" onClick="admin_stop(this,'<?php echo ($v["id"]); ?>')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe615;</i></a><?php endif; ?>
-							<!-- <a style="text-decoration:none" onClick="admin_stop(this,'<?php echo ($v["id"]); ?>')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a>  -->
+
+							<a style="text-decoration:none" href="<?php echo U('adminChangeState',array('id'=>$v['id'],'state'=>0));?>" title="启/停用"><i class="Hui-iconfont">&#xe61d;</i></a>
+
 							<a title="编辑" href="<?php echo U('adminEdit',array('id'=>$v['id']));?>" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> 
-							<a title="删除" href="javascript:;" onclick="admin_del(this,'<?php echo ($v["id"]); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+
+							<a title="删除" href="<?php echo U('adminDel',array('id'=>$v['id']));?>" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 			</tbody>
@@ -93,18 +98,26 @@
 	
 
 </div>
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script>  
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/laypage/1.2/laypage.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script>  
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/laypage/1.2/laypage.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Roger_www/web11152/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
-
-	// 查看角色
-	function checkRole(title,url,id,w,h){
+	/*
+		参数解释：
+		title	标题
+		url		请求的url
+		id		需要操作的数据id
+		w		弹出层宽度（缺省调默认值）
+		h		弹出层高度（缺省调默认值）
+	*/
+	/*管理员-增加界面*/
+	function admin_add(title,url,w,h){
 		layer_show(title,url,w,h);
 	}
+
 	// Ajax分页
 	var num = 1;
 	var where = '';
@@ -144,56 +157,6 @@
 			$('#box').html(a);
 		});
 	}
-/*管理员-权限-删除*/
-function admin_del(obj,id){
-	layer.confirm('管理员删除须谨慎，确认要删除吗？',function(index){
-		//此处请求后台程序，下方是成功后的前台处理……
-		$.ajax({
-			url: "<?php echo U('Admin/Admin/adminDel');?>" ,
-			data:{'id':id},
-			success:function(data){
-				$(obj).parents("tr").remove();
-				layer.msg('已删除!',{icon:1,time:1000});
-			},
-			datatype:"json",
-		});
-	});
-}
-	/*管理员-停用*/
-function admin_stop(obj,id){
-	layer.confirm('确认要停用吗？',function(index){
-		//此处请求后台程序，下方是成功后的前台处理……
-		$.ajax({
-			url: "<?php echo U('Admin/Admin/adminChangeState');?>" ,
-			data:{'id':id},
-			success:function(data){
-				$(obj).parents("tr").find(".td-manage").prepend('<a onClick="admin_start(this,id)" href="javascript:;" title="启用" style="text-decoration:none"><i class="Hui-iconfont">&#xe631;</i></a>');
-				$(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">已停用</span>');
-				$(obj).remove();
-				layer.msg('已停用!',{icon: 5,time:1000});
-			},
-			datatype:"json",
-		});		
-	});
-}
-
-/*管理员-启用*/
-function admin_start(obj,id){
-	layer.confirm('确认要启用吗？',function(index){
-		//此处请求后台程序，下方是成功后的前台处理……
-		$.ajax({
-			url: "<?php echo U('Admin/Admin/adminChangeState');?>" ,
-			data:{'id':id},
-			success:function(data){
-				$(obj).parents("tr").find(".td-manage").prepend('<a onClick="admin_stop(this,id)" href="javascript:;" title="停用" style="text-decoration:none"><i class="Hui-iconfont">&#xe615;</i></a>');
-				$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
-				$(obj).remove();
-				layer.msg('已启用!', {icon: 6,time:1000});
-			},
-			datatype:"json",
-		});
-	});
-}
 </script>
 </body>
 </html>

@@ -21,7 +21,7 @@
 					<td><input type="checkbox" value="" name=""></td>
 					<td><?php echo ($v["id"]); ?></td>
 					<td><?php echo ($v["title"]); ?></td>
-					<td><img src="/Roger_www/web11152/<?php echo ($v["bgpic"]); ?>" width="120"  height="40"/></td>
+					<td><img src="/LGM1116/<?php echo ($v["bgpic"]); ?>" width="120"  height="40"/></td>
 					<td><?php if($v["state"] == 1): ?>是
 					    <?php else: ?>否<?php endif; ?>
 					</td>

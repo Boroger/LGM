@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class RegisterController extends Controller {
+class RegisterController extends BaseController {
 	public function register()
     {
     	$this->display();

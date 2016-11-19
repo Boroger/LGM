@@ -14,10 +14,10 @@
 
 	<div class="mt-20">
 
-		<table class="table table-bor/Roger_www/web11152/Public/admin/er table-bordered table-bg table-hover table-sort">
+		<table class="table table-bor/LGM1116/Public/admin/er table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
-					<th width="40"><i/Roger_www/web11152/Public/admin/put name="" type="checkbox" value=""></th>
+					<th width="40"><i/LGM1116/Public/admin/put name="" type="checkbox" value=""></th>
 					<th width="40">ID</th>
 					<th width="80">小组名</th>
 					<th width="80">logo</th>
@@ -34,13 +34,13 @@
 					<td><input name="" type="checkbox" value=""></td>
 					<td><?php echo ($v["id"]); ?></td>
 					<td><?php echo ($v["name"]); ?></td>
-					<td><img src="/Roger_www/web11152/<?php echo ($v["logo"]); ?>" width="80" height="30" onclick="group_add('logo','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>1));?>','150','200')"/></td>
+					<td><img src="/LGM1116/<?php echo ($v["logo"]); ?>" width="80" height="30" onclick="group_add('logo','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>1));?>','150','200')"/></td>
 					<td><?php if($v["cid"] == 0): ?>3C数码
 						<?php elseif($v["cid"] == 1): ?>文化
 						<?php elseif($v["cid"] == 2): ?>行摄
 						<?php else: ?>文化<?php endif; ?>
 					</td>
-					<td><img src="/Roger_www/web11152/<?php echo ($v["bgpic"]); ?>" width="100" height="40" onclick="group_add('background','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>2));?>','800','300')"/></td>
+					<td><img src="/LGM1116/<?php echo ($v["bgpic"]); ?>" width="100" height="40" onclick="group_add('background','<?php echo U('Group/image',array('id'=>$v['id'],'state'=>2));?>','800','300')"/></td>
 					<td><?php echo ($v["description"]); ?></td>
 					<td><?php echo ($v["ctime"]); ?></td>
 					<td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.html','10001')" href="<?php echo U('edit',array('id'=>$v['id']));?>" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" href="<?php echo U('del',array('id'=>$v['id']));?>" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>

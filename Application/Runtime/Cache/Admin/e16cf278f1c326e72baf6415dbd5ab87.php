@@ -10,21 +10,21 @@
 <LINK rel="Bookmark" href="/favicon.ico" >
 <LINK rel="Shortcut Icon" href="/favicon.ico" />
 
-<link href="/Roger_www/LGM1116/Public/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/umeditor/third-party/jquery.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Roger_www/LGM1116/Public/umeditor/umeditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Roger_www/LGM1116/Public/umeditor/umeditor.min.js"></script>
-<script type="text/javascript" src="/Roger_www/LGM1116/Public/umeditor/lang/zh-cn/zh-cn.js"></script>
+<link href="/LGM1116/Public/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/LGM1116/Public/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/LGM1116/Public/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/LGM1116/Public/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="/LGM1116/Public/umeditor/lang/zh-cn/zh-cn.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/lib/icheck/icheck.css" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Roger_www/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
-<link rel="stylesheet" href="/Roger_www/LGM1116/Public/dist/css/bootstrap.min.css">
-<!-- <script src="/Roger_www/LGM1116/Public/dist/jquery-1.11.3.min.js"></script> -->
-<script src="/Roger_www/LGM1116/Public/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/LGM1116/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" href="/LGM1116/Public/dist/css/bootstrap.min.css">
+<!-- <script src="/LGM1116/Public/dist/jquery-1.11.3.min.js"></script> -->
+<script src="/LGM1116/Public/dist/js/bootstrap.min.js"></script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -74,9 +74,9 @@
 			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
 			<div class="formControls col-xs-6 col-sm-7"> 
 
-			<script type="text/plain" id="myEditor" style="width:771px;height:240px;">
+				<script type="text/plain" id="myEditor" style="width:771px;height:240px;">
 
-			</script>
+				</script>
 			</div>
 		</div>
 

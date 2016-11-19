@@ -6,7 +6,7 @@
                     <div class="white fl col-md-12">
                         <div class="fl">
                             <a href="">
-                              <img style="width:70px;border-radius:50px" src="/Roger_www/web11152/Public/home/image/head1.jpg" alt="">
+                              <img style="width:70px;border-radius:50px" src="/LGM1116/Public/home/image/head1.jpg" alt="">
                             </a>
                         </div>
                         <div class=" col-lt-3 col-sm-3 col-md-3 fl" >
@@ -21,7 +21,7 @@
                 <div class="clear"></div>
                 <div class="row">
                   <div class="col-mid-12 ">
-                  <div class=""><img style="width:100%" src="/Roger_www/web11152/Public/home/image/title1.jpg" alt=""></div>
+                  <div class=""><img style="width:100%" src="/LGM1116/Public/home/image/title1.jpg" alt=""></div>
                   </div>
                 </div>
             <div class=" row">

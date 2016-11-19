@@ -7,36 +7,23 @@ class AdminController extends BaseController
 	// 管理员添加
 	public function adminAdd()
 	{	
-        $role = M('role');
-        $data = $role->select();
-        // var_dump($data);
-        // die;
-        $this->assign('data',$data);
 		$this->display();
 	}
 	public function adminDoAdd()
 	{
-        $_POST['date'] = date('Y-m-d,H:i:s',time());
-        $admin = M('admin');
-        if (!$admin->create()) {
+		// $_POST['date'] = NOW_TIME;
+		$_POST['date'] = date('Y-m-d,H:i:s',time());
+		$admin = M('admin');
+		if (!$admin->create()) {
             //如果创建数据失败,表示验证没有通过
             //输出错误信息 并且跳转
             $this->error($admin->getError());
         } else {
             //验证通过 执行添加操作
             //执行添加
-            // 获取新创建adminID
-            $adminid = $admin->add();         
-            foreach ($_POST as $k => $v) {
-                if(strncmp ($k,"roleid",6) == 0){
-                    $dataList[] = array('adminid'=>$adminid,'roleid'=>$v);
-                }
-            }
-            $admin_role = M('admin_role');
-            // $role_perm->addAll($dataList);
-            if ($admin_role->addAll($dataList) > 0) {
-               $this->success('恭喜您,添加成功!', U('Admin/adminList'));
-                // echo "恭喜您,添加成功!";
+            if (M('admin')->add() > 0) {
+               // $this->success('恭喜您,添加成功!', U('Index/index'));
+            	echo "恭喜您,添加成功!";
             } else {
                $this->error('添加失败....');
             }
@@ -51,33 +38,18 @@ class AdminController extends BaseController
 		}
 		$id = I('get.id/d');
 		if (M('admin')->delete($id)>0) {
-            if (M('admin_role')->where("adminid=$id")->delete() >0){
 			$this->success('删除成功',U('adminList'));
-            } else {
-                $this->error('删除关联信息失败',U('adminList'));         
-            }
 		} else {
-			$this->error('删除管理员失败',U('adminList'));
+			$this->error('删除失败',U('adminList'));
 		}
 	}
 
 	// 管理员编辑
 	public function adminEdit()
 	{
-        $adminid = I('get.id/d');
-        $data = M('admin')->find($adminid);
-        $list1 = M('admin_role')->where("adminid=$adminid")->select();
-        foreach ($list1 as $k => $v) {
-            $list2[] = $v['roleid'];
-        }
-        $list3 = M('role')->select();
-        // var_dump($list1);
-        // var_dump($list2);
-        // var_dump($list3);
-        // die;
-        $this->assign('data',$data);//当前管理员信息
-        $this->assign('list2',$list2);//当前管理员的角色id
-        $this->assign('list3',$list3);//所有角色信息
+        $id = I('get.id/d');
+        $data = M('admin')->find($id);
+        $this->assign('data',$data);
 		$this->display();
 	}
     public function adminUpdate()
@@ -86,34 +58,13 @@ class AdminController extends BaseController
             $this->redirect('Admin/admin/adminEdit');
             exit;
         }
-        $admin = M('admin');
-        $admin_role = M('admin_role');
-        if (!$admin->create() || !$admin_role->create()) {
-            //如果创建数据失败,表示验证没有通过
-            //输出错误信息 并且跳转
-            $this->error($admin->getError());
-            $this->error($admin_role->getError());
+        $data = M('admin')->create();
+
+        //执行修改
+        if (M('admin')->save() > 0) {
+            $this->success('恭喜您,修改成功!', U('adminList'));
         } else {
-            //验证通过 执行添加操作
-            //先执行admin表的修改
-            $adminid = I('post.id/d');
-            // var_dump($roleid);
-            // die;
-            $admin->save(); 
-            // 删除role_perm里原先关于此roleid的记录
-            $admin_role->where("adminid=$adminid")->delete();
-            // 全部重新创建
-            foreach ($_POST as $k => $v) {
-                if(strncmp ($k,"roleid",6) == 0){
-                    $dataList[] = array('adminid'=>$adminid,'roleid'=>$v);
-                }
-            }
-            if ($admin_role->addAll($dataList) > 0) {
-               $this->success('恭喜您,修改成功!', U('Admin/adminList'));
-                // echo "恭喜您,添加成功!";
-            } else {
-               $this->error('修改失败....');
-            }
+        	$this->error('修改失败....');
         }
 	}
 
@@ -179,10 +130,72 @@ class AdminController extends BaseController
 		$total = $perm->field('count(*)')->select();
 		$total = $total[0]['count(*)'];
         $this->assign('totals',$total);
-		$list = $perm->where($where)->select();
+		$list = $perm->where($where)->page($num,5)->select();
+		$this->assign('total',ceil($total/5));
         $this->assign('list',$list);
 		$this->display();	
 	}
+	// 权限节点添加
+	public function permAdd()
+	{
+		$this->display();
+	}
+	public function permDoAdd()
+	{
+		$perm = M('perm');
+		if (!$perm->create()) {
+            //如果创建数据失败,表示验证没有通过
+            //输出错误信息 并且跳转
+            $this->error($perm->getError());
+        } else {
+            //验证通过 执行添加操作
+            //执行添加
+            if (M('perm')->add() > 0) {
+               // $this->success('恭喜您,添加成功!', U('Index/index'));
+            	echo "恭喜您,添加成功!";
+            } else {
+               $this->error('添加失败....');
+            }
+        }
+	}
+
+	// 权限节点删除
+	public function permDel()
+	{
+		if (empty($_GET['id'])) {
+			$this->redirect('Admin/admin/permList');
+		}
+		$id = I('get.id/d');
+		if (M('perm')->delete($id)>0) {
+			$this->success('删除成功',U('permList'));
+		} else {
+			$this->error('删除失败',U('permList'));
+		}
+	}
+	// 权限节点修改
+	public function permEdit()
+	{
+        $id = I('get.id/d');
+        $data = M('perm')->find($id);
+        $this->assign('data',$data);
+		$this->display();
+	}
+    public function permUpdate()
+	{
+		if (empty($_POST)) {
+            $this->redirect('Admin/admin/permEdit');
+            exit;
+        }
+        $data = M('perm')->create();
+
+        //执行修改
+        if (M('perm')->save() > 0) {
+            $this->success('恭喜您,修改成功!', U('permList'));
+        } else {
+        	$this->error('修改失败....');
+        }
+	}
+
 /***************************************************************************************/ 
 	//角色管理主页 
 	public function roleList()
@@ -191,18 +204,14 @@ class AdminController extends BaseController
 		$total = $role->field('count(*)')->select();
 		$total = $total[0]['count(*)'];
         $this->assign('totals',$total);
-		// $list = $role->where($where)->page($num,5)->select();
-		// $this->assign('total',ceil($total/5));
-		$list = $role->where($where)->select();
+		$list = $role->where($where)->page($num,5)->select();
+		$this->assign('total',ceil($total/5));
         $this->assign('list',$list);
 		$this->display();	
 	}
 	// 角色添加
 	public function roleAdd()
 	{
-		$perm = M('perm');
-		$list = $perm->select();
-		$this->assign('list',$list);
 		$this->display();
 	}
 	public function roleDoAdd()
@@ -215,18 +224,9 @@ class AdminController extends BaseController
         } else {
             //验证通过 执行添加操作
             //执行添加
-            // 获取新创建roleID
-        	$roleid = M('role')->add();        	
-        	foreach ($_POST as $k => $v) {
-        		if(strncmp ($k,"permid",6) == 0){
-        			$dataList[] = array('roleid'=>$roleid,'permid'=>$v);
-        		}
-        	}
-        	$role_perm = M('role_perm');
-        	// $role_perm->addAll($dataList);
-            if ($role_perm->addAll($dataList) > 0) {
-               $this->success('恭喜您,添加成功!', U('Admin/roleList'));
-            	// echo "恭喜您,添加成功!";
+            if (M('role')->add() > 0) {
+               // $this->success('恭喜您,添加成功!', U('Index/index'));
+            	echo "恭喜您,添加成功!";
             } else {
                $this->error('添加失败....');
             }
@@ -240,135 +240,35 @@ class AdminController extends BaseController
 			$this->redirect('Admin/admin/roleList');
 		}
 		$id = I('get.id/d');
-        $data = M('admin_role')->where("roleid=$id")->select();
-        if (!empty($data)) {
-            return false;
-            exit;
-        }
 		if (M('role')->delete($id)>0) {
-			    $this->success('删除成功',U('roleList'));
+			$this->success('删除成功',U('roleList'));
 		} else {
-			$this->error('删除角色失败',U('roleList'));
+			$this->error('删除失败',U('roleList'));
 		}
 	}
 	//角色修改
 	public function roleEdit()
 	{
-    $id = I('get.id/d');
-		//读取所有权限
-		// $perm = M('perm');
-		// $list1 = $perm->select();
-  //       $this->assign('list1',$list1);
-        // 读取当前角色拥有权限
-        $role_perm = M('role_perm');
-        $data = $role_perm->where("roleid=$id")->field('permid')->select();
-        foreach ($data as $k2 => $v2){
-        	$list2[] = $v2['permid'];
-        }
-        $this->assign('list2',$list2);
-        // 读取当前角色信息
-        $list3 = M('role')->find($id);
-        $this->assign('list3',$list3);
+        $id = I('get.id/d');
+        $data = M('role')->find($id);
+        $this->assign('data',$data);
 		$this->display();
- 
-		// var_dump($list1);
-		// var_dump($list2);
-		// var_dump($list3);
-
 	}
     public function roleUpdate()
 	{
-		$role = M('role');
-        $role_perm = M('role_perm');
-		if (!$role->create() || !$role_perm->create()) {
-            //如果创建数据失败,表示验证没有通过
-            //输出错误信息 并且跳转
-            $this->error($role->getError());
-            $this->error($role_perm->getError());
+		if (empty($_POST)) {
+            $this->redirect('Admin/admin/roleEdit');
+            exit;
+        }
+        $data = M('role')->create();
+
+        //执行修改
+        if (M('role')->save() > 0) {
+            $this->success('恭喜您,修改成功!', U('roleList'));
         } else {
-            //验证通过 执行添加操作
-            //先执行role表的修改
-        	$roleid = I('post.id/d');
-            // var_dump($roleid);
-            // die;
-            $role->save(); 
-            // 删除role_perm里原先关于此roleid的记录
-            $role_perm->where("roleid=$roleid")->delete();
-            // 全部重新创建
-            foreach ($_POST as $k => $v) {
-                if(strncmp ($k,"permid",6) == 0){
-                    $dataList[] = array('roleid'=>$roleid,'permid'=>$v);
-                }
-            }
-            if ($role_perm->addAll($dataList) > 0) {
-               $this->success('恭喜您,修改成功!', U('Admin/roleList'));
-                // echo "恭喜您,添加成功!";
-            } else {
-               $this->error('修改失败....');
-            }
+        	$this->error('修改失败....');
         }
 	}
-	// 角色管理页点击查看所属用户
-  public function checkAdmin()
-  {
-    $roleid = I('get.id/d');
-    // var_dump($roleid);
-    // die;
-    $admin_role = M('admin_role');
-    $admin = M('admin');
-    $data = $admin_role->where("roleid=$roleid")->select();
-    foreach ($data as $k => $v) {
-      $adminid = $v['adminid'];
-      $list = $admin->field('name')->where("id=$adminid")->select();
-      foreach ($list as $k2 => $v2) {
-        $adminname[] = $v2['name'];
-      }
-    }
-    // var_dump($adminname);
-    // die;
-    $this->assign('adminname',$adminname);
-    $this->display();
-  }
-
-  // 角色管理页点击查看拥有权限
-  public function checkPerm()
-  {
-    $roleid = I('get.id/d');
-    $role_perm = M('role_perm');
-    $perm = M('perm');
-    $data = $role_perm->where("roleid=$roleid")->select();
-    foreach ($data as $k => $v) {
-      $permid = $v['permid'];
-      $list = $perm->field('perm')->where("id=$permid")->select();
-      foreach ($list as $k2 => $v2) {
-        $permname[] = $v2['perm'];
-      }
-    }
-    // var_dump($permname);
-    // die;
-    $this->assign('permname',$permname);
-    $this->display();
-  }
-  // 管理员主页点击查看拥有角色
-  public function checkRole()
-  {
-    $adminid = I('get.id/d');
-    $admin_role = M('admin_role');
-    $role = M('role');
-    $data = $admin_role->where("adminid=$adminid")->select();
-    foreach ($data as $k => $v) {
-      $roleid = $v['roleid'];
-      $list = $role->field('role')->where("id=$roleid")->select();
-      foreach ($list as $k2 => $v2) {
-        $rolename[] = $v2['role'];
-      }
-    }
-    // var_dump($permname);
-    // die;
-    $this->assign('rolename',$rolename);
-    $this->display();
-  }
+	
 }
-
-
 
