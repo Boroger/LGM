@@ -29,6 +29,7 @@ class ArticleController extends BaseController
   		$upload->rootPath = './Uploads/'; // 设置附件上传根目录
   		$upload->savePath = '/article/'; // 设置附件上传（子）目录
   		$info = $upload->uploadOne($_FILES['bgpic']);
+      dump($_FILES);die;
 
   		if(!$info) {// 上传错误提示错误信息
   		$this->error($upload->getError());
@@ -59,7 +60,7 @@ class ArticleController extends BaseController
 	            }
 	        }
 
-		}
+	    }
     }
 
     public function content()

@@ -32,34 +32,41 @@
 </head>
 <body>
 <article class="page-container">
-	<form action="" method="post" class="form form-horizontal" id="form-member-add">
+	<form action="<{:U('Member/doadd')}>" enctype="multipart/form-data" method="post" class="form form-horizontal" id="form-member-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>用户名：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>昵称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="username" name="username">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" placeholder="" id="password" name="password">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>性别：</label>
 			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
 				<div class="radio-box">
-					<input name="sex" type="radio" id="sex-1" checked>
-					<label for="sex-1">男</label>
+					<input name="sex" type="radio" id="sex-1" checked value="1">
+					男
 				</div>
 				<div class="radio-box">
-					<input type="radio" id="sex-2" name="sex">
-					<label for="sex-2">女</label>
+					<input type="radio" id="sex-2" name="sex" value="0">
+					女
 				</div>
 				<div class="radio-box">
-					<input type="radio" id="sex-3" name="sex">
-					<label for="sex-3">保密</label>
+					<input type="radio" id="sex-3" name="sex" value="2">
+					保密
 				</div>
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="mobile" name="mobile">
 			</div>
 		</div>
 		<div class="row cl">
@@ -69,28 +76,24 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3">附件：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>家乡：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" name="place" id="place">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">头像：</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="btn-upload form-group">
 				<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
 				<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
 				<input type="file" multiple name="file-2" class="input-file">
 				</span> </div>
 		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3">所在城市：</label>
-			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select class="select" size="1" name="city">
-					<option value="" selected>请选择城市</option>
-					<option value="1">北京</option>
-					<option value="2">上海</option>
-					<option value="3">广州</option>
-				</select>
-				</span> </div>
-		</div>
+		
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">备注：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="beizhu" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" onKeyUp="textarealength(this,100)"></textarea>
+				<textarea name="descr" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" onKeyUp="textarealength(this,100)"></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
 			</div>
 		</div>
@@ -127,12 +130,31 @@ $(function(){
 			username:{
 				required:true,
 				minlength:2,
-				maxlength:16
+				maxlength:8,
+				checkName:true,
+				remote: {
+                url: "<{:U('addajax')}>",
+                type: "get",
+                dataType: "json",
+                data: {
+                    username: function () {
+                        return $("#username").val();　　　　//这个是要验证的用户名
+                    }
+                },
+                dataFilter: function (data) {　　　　//判断控制器返回的内容
+                    if (data == "true") {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                  }
+                },     //remote 
 			},
 			sex:{
 				required:true,
 			},
-			mobile:{
+			phone:{
 				required:true,
 				isMobile:true,
 			},
@@ -140,21 +162,28 @@ $(function(){
 				required:true,
 				email:true,
 			},
-			uploadfile:{
-				required:true,
-			},
 			
 		},
+		messages: { 
+    // 注册用户名 
+            username: { 
+             	remote:"该昵称已存在"
+            }, 
+        },
 		onkeyup:false,
 		focusCleanup:true,
 		success:"valid",
-		submitHandler:function(form){
-			//$(form).ajaxSubmit();
-			var index = parent.layer.getFrameIndex(window.name);
-			//parent.$('.btn-refresh').click();
-			parent.layer.close(index);
-		}
+		// submitHandler:function(form){
+		// 	form.submit();
+		// 	var index = parent.layer.getFrameIndex(window.name);
+		// 	parent.$('.btn-refresh').click();
+		// 	parent.layer.close(index);
+		// }
 	});
+	$.validator.addMethod("checkName",function(value,element,params){  
+            var checkName = /^[\u4E00-\u9FA5]+$/;  
+            return this.optional(element)||(checkName.test(value));  
+        },"*仅限中文"); 
 });
 </script> 
 <!--/请在上方写此页面业务相关的脚本-->

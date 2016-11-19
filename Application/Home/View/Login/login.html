@@ -40,14 +40,14 @@
 	</a>
 <block name="main">	<!-- 继承的id -->
 	<div class="login_main">  
-		<form action="" method="post" class="form form-horizontal" id="form-member-add">
+		<form action="<{:U('Login/dologin')}>" method="post" class="form form-horizontal" id="form-member-add">
 		
 		<div class="row">
-			<input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;手机:" id="mobile" name="mobile">
+			<input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;手机:" id="phone" name="phone">
 		</div>
 		
 		<div class="row">
-			<input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;密码:" id="pass" name="pass">
+			<input type="password" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;密码:" id="password" name="password">
 		</div>
 
 		<div class="row">
@@ -74,7 +74,8 @@
 	<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script>  
 	<script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script> 
 	<script type="text/javascript" src="__PUBLIC__/admin/lib/laypage/1.2/laypage.js"></script> 
-	<script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+	<script type="text/ja        totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());     //浏览器的高度加上滚动条的高度 
+vascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script> 
 	<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 	<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 	<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
@@ -86,13 +87,5 @@
 	<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 	<script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 
-	<script>
-		$(function(){
-	$('.skin-minimal input').iCheck({
-		checkboxClass: 'icheckbox-blue',
-		radioClass: 'iradio-blue',
-		increaseArea: '20%'
-	});
-});
-	</script>
+
 </html>

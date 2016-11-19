@@ -1,33 +1,28 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!-- <?php var_dump($_SESSION)?> -->
+<!DOCTYPE html>
 <html lang="cn">
   	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Bootstrap -->
- 
-      
-	    <title>LGM</title>
-      <link rel="stylesheet" href="/LGM1116/Public/home/home.css">
-       <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-      
+	    <title>老干妈</title>
 
-    <link rel="stylesheet" href="/LGM1116/Public/dist/css/bootstrap.min.css">
-    <style>
-       body{
-            font-family: "Helvitica Neue",Helvitica,Arial,"Hiragino Sans GB","Microsoft YaHei","Arial Regular","Microsoft JhengHei",sans-serif;
-       }
-   
-    </style>
+	    <!-- Bootstrap -->
+	    <link href="/LGM1116/Public/css/bootstrap.min.css" rel="stylesheet">
+
       
-    </head>
+          <link rel="stylesheet" href="/LGM1116/Public/home/home.css">
+      
+  	</head>
     
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 
 <script type="text/javascript">
     var totalheight = 0;     //定义一个总的高度变量
     function loa动态加载数据ata()
     { 
         totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());     //浏览器的高度加上滚动条的高度 
+
         if ($(document).height() <= totalheight)     //当文档的高度小于或者等于总的高度的时候，开始动态加载数据
         {   
           $.ajax({
@@ -42,18 +37,21 @@
           });
         }
     } 
+
     $(window).scroll( function() { 
-        // console.log("滚动条到顶部的垂直高度: "+$(document).scrollTop()); 
-        // console.log('浏览器的高度：'+$(window).height());
-        // console.log("页面的文档高度 ："+$(document).height());
-        // console.log(totalheight);
+        console.log("滚动条到顶部的垂直高度: "+$(document).scrollTop()); 
+        console.log('浏览器的高度：'+$(window).height());
+        console.log("页面的文档高度 ："+$(document).height());
+        console.log(totalheight);
         loa动态加载数据ata();
     }); 
 
 </script>
 
 
-<body style='background-color:#fafcff;'>
+
+<body style="background-color: #f0f0f0">
+
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -94,12 +92,20 @@
         <button type="submit" class="btn btn-default glyphicon glyphicon-search"></button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-           <a href="<?php echo U('Home/Login/login');?>">登录</a>
-        </li>
-        <li>
-           <a href="<?php echo U('Home/Register/register');?>">注册</a>
-        </li>
+        <?php if($_SESSION['user_id'] == ''): ?><li>
+             <a href="<?php echo U('Home/Login/login');?>">登录</a>
+          </li>
+        <?php else: ?>
+          <li>
+              <a href=""><?php echo ($_SESSION['user_username']); ?></a>
+          </li><?php endif; ?>
+        <?php if($_SESSION['user_id'] == ''): ?><li>
+             <a href="<?php echo U('Home/Register/register');?>">注册</a>
+          </li>
+          <?php else: ?>
+          <li>
+            <a href="<?php echo U('Home/Login/logout');?>">退出</a>
+          </li><?php endif; ?>
          
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -314,19 +320,22 @@
     <div class="ggw" id="ggw"></div>  
 </div>  <!-- container -->
 
+    <!-- jQuery -->
+    <script src="/LGM1116/Public/js/jquery.min.js"></script>
+    <!-- bootstrap.min.js 必须放在JQ之后!!! -->
+    <script src="/LGM1116/Public/js/bootstrap.min.js"></script>
+    <script src="/LGM1116/Public/js/holder.min.js"></script>
 </body>
-
-<script>
-$(window).scroll(function()
-{
-  var st = $(this).scrollTop();
-  // console.log(st);
-  if (st>920) {
-    $('#ggw').css({position:"fixed",top:"70px"});
-  } else{
-    $('#ggw').css({position:"absolute",top:"930px"});
-  }
-});
+    <script>
+    $(window).scroll(function()
+    {
+      var st = $(this).scrollTop();
+      console.log(st);
+      if (st>920) {
+        $('#ggw').css({position:"fixed",top:"70px"});
+      } else{
+        $('#ggw').css({position:"absolute",top:"930px"});
+      }
+    });
 </script>
-
 </html>

@@ -45,19 +45,19 @@
   </a>
  <!-- 继承的id -->
   <div class="login_main" style="margin-top: -120px">  
-    <form action="" method="post" class="form form-horizontal" id="form-member-add">
+    <form action="<?php echo u('Home/Register/doregister');?>" method="post" class="form form-horizontal" id="form-member-add">
         <div class="row formControls">
-      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;昵称(仅限汉字,5-8个字符)" id="name" name="name">
+      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;昵称(仅限汉字,2-8个字符)" id="username" name="username">
     </div>
     <div class="row formControls">
-      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;手机:" id="mobile" name="mobile">
+      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;手机:" id="phone" name="phone">
     </div>
     <div class="row formControls">
       <input type="text" style="height:44px;width:170px" class="input-text" value="" placeholder="&nbsp;验证码(必填)" id="yzm" name="yzm">
-      <a href=""><input style="background-color: black;width:100px;height:44px;color:#f2f2f2;border: 2px solid white" class="btn btn-primary radius fr" type="submit" value="获取验证码"></a>
+      <a href=""><input style="background-color: black;width:100px;height:44px;color:#f2f2f2;border: 2px solid white;" class="btn btn-primary radius fr" type="submit" value="获取验证码"></a>
     </div>
     <div class="row formControls">
-      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;密码:" id="pass" name="pass">
+      <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;密码:" id="password" name="password">
     </div>
     <div class="row formControls">
       <input type="text" style="height:44px;width:300px" class="input-text" value="" placeholder="&nbsp;确认密码" id="confirm_pass" name="confirm_pass">
@@ -97,7 +97,13 @@
   <script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui/js/H-ui.js"></script> 
   <script type="text/javascript" src="/LGM1116/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 
-<script>
+
+
+
+
+
+<script type="text/javascript">
+
 $(function(){
   $('.skin-minimal input').iCheck({
     checkboxClass: 'icheckbox-blue',
@@ -107,17 +113,24 @@ $(function(){
   
   $("#form-member-add").validate({
     rules:{
-      name:{
-            required: true,
-            minlength:5,
-            maxlength:12,
-            remote: {
+      username:{
+        required:true,
+        minlength:2,
+        maxlength:8,
+        checkName:true,
+        
+      },
+
+      phone:{
+        required:true,
+        isMobile:true,
+        remote: {
                 url: "<?php echo U('confirm');?>",
-                type: "post",
+                type: "get",
                 dataType: "json",
                 data: {
-                    name: function () {
-                        return $("#name").val();　　　　//这个是要验证的用户名
+                    phone: function () {
+                        return $("#phone").val();　　　　//这个是要验证的用户名
                     }
                 },
                 dataFilter: function (data) {　　　　//判断控制器返回的内容
@@ -127,39 +140,46 @@ $(function(){
                     else {
                         return false;
                     }
-                }
-          }
-    },
-
-      mobile:{
-        required:true,
-        isMobile:true,
+                  }
+                },     //remote 
       },
+      password:{
+        required:true,
+        minlength:6,
+        maxlength:16,
+      },
+      confirm_pass:{
+        required:true,
+        equalTo:password, 
+      },
+
       email:{
         required:true,
         email:true,
       },
-      uploadfile:{
-        required:true,
-      },
+
       
     },
     messages: { 
-// 注册用户名 
-    name: { 
-      remote:"该用户名已存在"
-    }, 
-  },
+    // 注册用户名 
+            phone: { 
+              remote:"该手机号已存在"
+            }, 
+        },
     onkeyup:false,
     focusCleanup:true,
     success:"valid",
-    submitHandler:function(form){
-      //$(form).ajaxSubmit();
-      var index = parent.layer.getFrameIndex(window.name);
-      //parent.$('.btn-refresh').click();
-      parent.layer.close(index);
-    }
+    // submitHandler:function(form){
+    //  form.submit();
+    //  var index = parent.layer.getFrameIndex(window.name);
+    //  parent.$('.btn-refresh').click();
+    //  parent.layer.close(index);
+    // }
   });
+  $.validator.addMethod("checkName",function(value,element,params){  
+            var checkName = /^[\u4E00-\u9FA5]+$/;  
+            return this.optional(element)||(checkName.test(value));  
+        },"*仅限中文"); 
 });
-  </script>
+</script> 
 </html>

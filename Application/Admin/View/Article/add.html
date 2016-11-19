@@ -74,9 +74,9 @@
 			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
 			<div class="formControls col-xs-6 col-sm-7"> 
 
-				<script type="text/plain" id="myEditor" style="width:771px;height:240px;">
+			<script type="text/plain" id="myEditor" style="width:771px;height:240px;">
 
-				</script>
+			</script>
 			</div>
 		</div>
 
